@@ -170,13 +170,13 @@ def PowerSpider(coord):                     #Powering all connected circuits
                         cmap[cti([x+i+1,y+z])] = 8
                         PowerCloser([x+i+1,y+z])
 
-                elif cmap[cti([x+i,y+z])] == 18: #Jumper\
+                elif cmap[cti([x+i,y+z])] == 18: #Jumper
                     cmap[cti([x+i,y+z])] = 19
                     if cmap[cti([x+(i*5),y+(z*5)])] == 8:
                         cmap[cti([x+(i*5),y+(z*5)])] = 10
                         PowerSpider([x+(i*5),y+(z*5)])
 
-                elif cmap[cti([x+i,y+z])] == 20: #Jumper
+                elif cmap[cti([x+i,y+z])] == 20: #Long Jumper
                     cmap[cti([x+i,y+z])] = 21
                     if cmap[cti([x+(i*7),y+(z*7)])] == 8:
                         cmap[cti([x+(i*7),y+(z*7)])] = 10
